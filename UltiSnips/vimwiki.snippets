@@ -1,7 +1,7 @@
 snippet w "Title Block" b
 ---
 title: ${1:`!p snip.rv = fn.rstrip('.md').replace('-', ' ')`}
-Date: `date '+%Y-%M-%d %H:%m'`
+Date: `date '+%Y-%m-%d %H:%M'`
 Tags: ${2:unknown, unknown}
 URL: `!p snip.rv ='' if not fn else fn.strip().rstrip('.md').replace(' ', '-')`
 ---
@@ -16,3 +16,7 @@ snippet t
 <tag>${1}${VISUAL:inside text/should/is/g}</tag>
 endsnippet
 
+snippet c "Insert code block" b
+\`\`\`${0}
+\`\`\`
+endsnippet
